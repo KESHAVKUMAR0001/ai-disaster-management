@@ -1,0 +1,453 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: #182848;
+    color: white;
+    padding: 18px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #ffd166;
+}
+
+
+/* MAIN */
+
+.simulator-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* HEADER */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #666;
+}
+
+
+/* COMMON CARD */
+
+.situation-card,
+.settings-card,
+.recommendation-card,
+.what-if-card,
+.authority-card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 30px;
+}
+
+.situation-card h2,
+.settings-card h2,
+.plans-section h2,
+.recommendation-card h2,
+.what-if-card h2,
+.authority-card h2 {
+    color: #182848;
+    margin-bottom: 20px;
+}
+
+
+/* SITUATION */
+
+.situation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.situation-grid div {
+    background: #f4f7fb;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.situation-grid span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.situation-grid strong {
+    font-size: 20px;
+}
+
+
+/* SETTINGS */
+
+.info {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.simulate-btn {
+    margin-top: 25px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #182848;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.simulate-btn:hover {
+    background: #2471a3;
+}
+
+#simulationMessage {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
+/* PLANS */
+
+.plans-section {
+    margin-bottom: 30px;
+}
+
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.plan-card {
+    position: relative;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border-top: 5px solid #2471a3;
+}
+
+.plan-card.recommended {
+    border-top-color: #27ae60;
+}
+
+.recommended-label {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    background: #27ae60;
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.plan-header {
+    margin-bottom: 20px;
+}
+
+.plan-header h3 {
+    color: #182848;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.plan-header span {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* SCORE */
+
+.score {
+    background: #f4f7fb;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.score span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+}
+
+.score strong {
+    font-size: 38px;
+    color: #182848;
+}
+
+.score small {
+    color: #777;
+}
+
+
+/* PLAN DETAILS */
+
+.plan-details p {
+    margin: 12px 0;
+    color: #555;
+}
+
+.plan-details strong {
+    color: #182848;
+}
+
+
+/* RECOMMENDATION */
+
+.recommendation-result {
+    background: #f4f7fb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.recommendation-result h3 {
+    color: #27ae60;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.recommendation-result p {
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* WHAT IF */
+
+.what-if-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.what-if-result {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #f4f7fb;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* AUTHORITY */
+
+.authority-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.authority-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.approve-btn,
+.override-btn {
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.approve-btn {
+    background: #27ae60;
+}
+
+.override-btn {
+    background: #e67e22;
+}
+
+.approve-btn:hover {
+    background: #219150;
+}
+
+.override-btn:hover {
+    background: #ca6f1e;
+}
+
+#authorityMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* BOTTOM ACTIONS */
+
+.bottom-actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+    flex-wrap: wrap;
+
+    margin: 30px 0;
+}
+
+.bottom-actions a {
+    background: #182848;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bottom-actions a:hover {
+    background: #2471a3;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #182848;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .situation-grid,
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plans-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .situation-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simulator-container {
+        width: 94%;
+    }
+}

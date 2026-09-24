@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rescue Teams</title>
+
+    <link rel="stylesheet" href="../CSS/rescue-teams.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <a href="authority-dashboard.html" class="back-btn">
+        ← Back to Dashboard
+    </a>
+
+</header>
+
+
+<main class="rescue-container">
+
+    <section class="page-header">
+
+        <div class="team-icon">
+            🚑
+        </div>
+
+        <h1>
+            Rescue Teams
+        </h1>
+
+        <p>
+            Manage rescue teams and their current availability
+        </p>
+
+    </section>
+
+
+    <!-- ADD RESCUE TEAM -->
+
+    <section class="card">
+
+        <h2>
+            Add Rescue Team
+        </h2>
+
+        <form id="rescueTeamForm">
+
+            <label for="teamName">
+                Team Name
+            </label>
+
+            <input
+                type="text"
+                id="teamName"
+                placeholder="Enter team name"
+                required
+            >
+
+
+            <label for="teamLeader">
+                Team Leader
+            </label>
+
+            <input
+                type="text"
+                id="teamLeader"
+                placeholder="Enter team leader name"
+                required
+            >
+
+
+            <label for="teamLocation">
+                Current Location
+            </label>
+
+            <input
+                type="text"
+                id="teamLocation"
+                placeholder="Enter current location"
+                required
+            >
+
+
+            <label for="teamStatus">
+                Team Status
+            </label>
+
+            <select id="teamStatus">
+
+                <option value="Available">
+                    Available
+                </option>
+
+                <option value="Busy">
+                    Busy
+                </option>
+
+                <option value="Offline">
+                    Offline
+                </option>
+
+            </select>
+
+
+            <button type="submit">
+                Add Rescue Team
+            </button>
+
+            <p id="result"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- TEAM LIST -->
+
+    <section class="card">
+
+        <h2>
+            Rescue Teams List
+        </h2>
+
+        <div id="teamList">
+
+            <p class="empty">
+                No rescue teams added yet.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response & Resource Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/rescue-teams.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Resource Management</title>
+
+    <link rel="stylesheet"
+          href="../CSS/resources.css">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <nav>
+
+        <a href="citizen-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="report-disaster.html">
+            Report Disaster
+        </a>
+
+        <a href="map.html">
+            Risk Map
+        </a>
+
+        <a href="resources.html">
+            Resources
+        </a>
+
+        <a href="alerts.html">
+            Alerts
+        </a>
+
+        <a href="decision-simulator.html">
+            AI Simulator
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="resources-container">
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <h1>
+            📦 Resource Management
+        </h1>
+
+        <p>
+            AI-powered emergency resource prediction
+            and allocation.
+        </p>
+
+    </section>
+
+
+    <!-- AI PREDICTION -->
+
+    <section class="ai-prediction">
+
+        <h2>
+            🤖 AI Resource Prediction
+        </h2>
+
+        <div class="prediction-grid">
+
+            <div>
+                <span>
+                    Disaster Area
+                </span>
+
+                <strong id="disasterArea">
+                    Visakhapatnam
+                </strong>
+            </div>
+
+
+            <div>
+                <span>
+                    Affected Population
+                </span>
+
+                <strong id="affectedPopulation">
+                    350
+                </strong>
+            </div>
+
+
+            <div>
+                <span>
+                    Overall Demand
+                </span>
+
+                <strong id="overallDemand">
+                    HIGH
+                </strong>
+            </div>
+
+
+            <div>
+                <span>
+                    Priority
+                </span>
+
+                <strong id="priority">
+                    IMMEDIATE
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESOURCE CARDS -->
+
+    <section>
+
+        <h2 class="section-title">
+            Required Resources
+        </h2>
+
+
+        <div class="resource-grid">
+
+
+            <div class="resource-card shortage">
+
+                <h3>
+                    🚑 Ambulances
+                </h3>
+
+                <p>
+                    Required
+                </p>
+
+                <strong>
+                    8
+                </strong>
+
+                <span>
+                    Shortage
+                </span>
+
+            </div>
+
+
+            <div class="resource-card available">
+
+                <h3>
+                    👨‍⚕️ Medical Teams
+                </h3>
+
+                <p>
+                    Required
+                </p>
+
+                <strong>
+                    5
+                </strong>
+
+                <span>
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="resource-card available">
+
+                <h3>
+                    🚒 Rescue Teams
+                </h3>
+
+                <p>
+                    Required
+                </p>
+
+                <strong>
+                    4
+                </strong>
+
+                <span>
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="resource-card shortage">
+
+                <h3>
+                    🍱 Food Kits
+                </h3>
+
+                <p>
+                    Required
+                </p>
+
+                <strong>
+                    700
+                </strong>
+
+                <span>
+                    Shortage
+                </span>
+
+            </div>
+
+
+            <div class="resource-card available">
+
+                <h3>
+                    💧 Water Kits
+                </h3>
+
+                <p>
+                    Required
+                </p>
+
+                <strong>
+                    700
+                </strong>
+
+                <span>
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="resource-card shortage">
+
+                <h3>
+                    🏠 Emergency Shelters
+                </h3>
+
+                <p>
+                    Required
+                </p>
+
+                <strong>
+                    6
+                </strong>
+
+                <span>
+                    Shortage
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESOURCE LOCATIONS -->
+
+    <section>
+
+        <h2 class="section-title">
+            📍 Resource Locations
+        </h2>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Resource Center
+                        </th>
+
+                        <th>
+                            Location
+                        </th>
+
+                        <th>
+                            Resource
+                        </th>
+
+                        <th>
+                            Availability
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Emergency Medical Center
+                        </td>
+
+                        <td>
+                            Visakhapatnam
+                        </td>
+
+                        <td>
+                            Medical Teams
+                        </td>
+
+                        <td class="available-text">
+                            Available
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Rescue Team Base
+                        </td>
+
+                        <td>
+                            Bheemunipatnam
+                        </td>
+
+                        <td>
+                            Rescue Teams
+                        </td>
+
+                        <td class="available-text">
+                            Available
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Emergency Resource Center
+                        </td>
+
+                        <td>
+                            Visakhapatnam
+                        </td>
+
+                        <td>
+                            Food & Water Kits
+                        </td>
+
+                        <td class="shortage-text">
+                            Limited
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI RECOMMENDATION -->
+
+    <section class="recommendation">
+
+        <h2>
+            🧠 AI Allocation Recommendation
+        </h2>
+
+        <p id="recommendationText">
+
+            AI recommends prioritizing ambulances,
+            food kits and emergency shelters for the
+            high-risk disaster zone.
+
+        </p>
+
+        <ul>
+
+            <li>
+                Deploy available ambulances first.
+            </li>
+
+            <li>
+                Move food kits from nearby centers.
+            </li>
+
+            <li>
+                Prepare additional emergency shelters.
+            </li>
+
+            <li>
+                Keep rescue teams ready for immediate deployment.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ACTIONS -->
+
+    <section class="actions">
+
+        <a href="map.html"
+           class="action-btn">
+
+            🗺️ View Resource Map
+
+        </a>
+
+
+        <a href="decision-simulator.html"
+           class="action-btn">
+
+            🤖 Run AI Decision Simulation
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response &
+        Resource Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/resources.js"></script>
+
+</body>
+
+</html>

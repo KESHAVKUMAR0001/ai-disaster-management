@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Prediction - Disaster Response</title>
+
+    <link rel="stylesheet"
+          href="../CSS/prediction.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <nav>
+
+        <a href="citizen-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="report-disaster.html">
+            Report
+        </a>
+
+        <a href="map.html">
+            Risk Map
+        </a>
+
+        <a href="alerts.html">
+            Alerts
+        </a>
+
+        <a href="index.html" id="logoutBtn">
+            Logout
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="prediction-page">
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="heading">
+
+        <h1>
+            🤖 AI Disaster Prediction
+        </h1>
+
+        <p>
+            AI analysis of the submitted disaster report
+        </p>
+
+    </section>
+
+
+    <!-- LOADING -->
+
+    <div id="loading" class="loading">
+
+        <div class="loader"></div>
+
+        <h3>
+            AI is analyzing the disaster...
+        </h3>
+
+        <p>
+            Processing severity, impact and resource requirements.
+        </p>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <section id="predictionResult"
+             class="result-section"
+             style="display:none;">
+
+
+        <!-- RISK SUMMARY -->
+
+        <div class="risk-card">
+
+            <div>
+
+                <h2>
+                    Overall Risk Level
+                </h2>
+
+                <p id="riskLevel">
+                    -
+                </p>
+
+            </div>
+
+            <div class="risk-score">
+
+                <span id="riskScore">
+                    0
+                </span>
+
+                <small>
+                    / 100
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- PREDICTION CARDS -->
+
+        <div class="prediction-grid">
+
+
+            <div class="prediction-card">
+
+                <div class="card-icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Severity
+                </h3>
+
+                <p id="severity">
+                    -
+                </p>
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <h3>
+                    Affected Population
+                </h3>
+
+                <p id="affectedPopulation">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <h3>
+                    Resource Demand
+                </h3>
+
+                <p id="resourceDemand">
+                    -
+                </p>
+
+            </div>
+
+
+            <div class="prediction-card">
+
+                <div class="card-icon">
+                    🚑
+                </div>
+
+                <h3>
+                    Evacuation Priority
+                </h3>
+
+                <p id="evacuationPriority">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMPACT -->
+
+        <div class="impact-card">
+
+            <h2>
+                📊 AI Impact Analysis
+            </h2>
+
+            <p id="impactAnalysis">
+                -
+            </p>
+
+        </div>
+
+
+        <!-- AI EXPLANATION -->
+
+        <div class="explanation-card">
+
+            <h2>
+                🧠 Why did AI give this prediction?
+            </h2>
+
+            <ul id="aiReasons">
+
+                <li>
+                    Waiting for AI analysis...
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="actions">
+
+            <a href="map.html"
+               class="btn primary">
+
+                🗺️ View Risk Map
+
+            </a>
+
+            <a href="resources.html"
+               class="btn secondary">
+
+                📦 View Resources
+
+            </a>
+
+            <a href="citizen-dashboard.html"
+               class="btn outline">
+
+                ← Dashboard
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ERROR -->
+
+    <div id="errorMessage"
+         class="error"
+         style="display:none;">
+
+        Unable to load AI prediction.
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response & Resource Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/api.js"></script>
+<script src="../JAVASCRIPT/prediction.js"></script>
+
+</body>
+
+</html>

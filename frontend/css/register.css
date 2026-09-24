@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+
+    background: #102a43;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* REGISTER PAGE */
+
+.register-page {
+
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* CARD */
+
+.register-card {
+
+    width: 450px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.10);
+}
+
+.register-card h1 {
+
+    text-align: center;
+
+    color: #102a43;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+
+    text-align: center;
+
+    color: #627d98;
+
+    margin-bottom: 30px;
+}
+
+
+/* FORM */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #334e68;
+}
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #bcccdc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #1976d2;
+}
+
+
+/* BUTTON */
+
+.register-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1976d2;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.register-btn:hover {
+
+    opacity: 0.9;
+}
+
+
+/* MESSAGE */
+
+#message {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+
+/* LOGIN */
+
+.login-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #627d98;
+}
+
+.login-text a {
+
+    color: #1976d2;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 0 20px;
+    }
+
+    .logo {
+
+        font-size: 17px;
+    }
+
+    .register-card {
+
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+}

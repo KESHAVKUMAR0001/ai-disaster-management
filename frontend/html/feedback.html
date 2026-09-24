@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citizen Feedback</title>
+
+    <link rel="stylesheet" href="../CSS/feedback.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <a href="citizen-dashboard.html" class="back-btn">
+        ← Back to Dashboard
+    </a>
+
+</header>
+
+
+<main class="feedback-container">
+
+    <section class="feedback-card">
+
+        <div class="feedback-header">
+
+            <div class="feedback-icon">
+                💬
+            </div>
+
+            <h1>
+                Citizen Feedback
+            </h1>
+
+            <p>
+                Help us improve the disaster response service
+            </p>
+
+        </div>
+
+
+        <form id="feedbackForm">
+
+            <label for="rating">
+                Rate Our Service
+            </label>
+
+            <select id="rating" required>
+
+                <option value="">
+                    Select your rating
+                </option>
+
+                <option value="5">
+                    5 - Excellent
+                </option>
+
+                <option value="4">
+                    4 - Good
+                </option>
+
+                <option value="3">
+                    3 - Average
+                </option>
+
+                <option value="2">
+                    2 - Poor
+                </option>
+
+                <option value="1">
+                    1 - Very Poor
+                </option>
+
+            </select>
+
+
+            <label for="feedback">
+                Your Feedback
+            </label>
+
+            <textarea
+                id="feedback"
+                placeholder="Tell us about your experience..."
+                required>
+            </textarea>
+
+
+            <button type="submit">
+                Submit Feedback
+            </button>
+
+            <p id="feedbackResult"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response & Resource Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/feedback.js"></script>
+
+</body>
+</html>

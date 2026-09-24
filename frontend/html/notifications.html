@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications</title>
+
+    <link rel="stylesheet" href="../CSS/notifications.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <a href="authority-dashboard.html" class="back-btn">
+        ← Back to Dashboard
+    </a>
+
+</header>
+
+
+<main class="notification-container">
+
+    <section class="notification-card">
+
+        <div class="notification-header">
+
+            <div class="notification-icon">
+                🔔
+            </div>
+
+            <h1>
+                Notifications
+            </h1>
+
+            <p>
+                Send important emergency notifications to citizens
+            </p>
+
+        </div>
+
+
+        <form id="notificationForm">
+
+            <label for="recipient">
+                Recipient
+            </label>
+
+            <input
+                type="text"
+                id="recipient"
+                placeholder="Enter recipient"
+                required
+            >
+
+
+            <label for="message">
+                Notification Message
+            </label>
+
+            <textarea
+                id="message"
+                placeholder="Enter emergency notification..."
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Send Notification
+            </button>
+
+            <p id="result"></p>
+
+        </form>
+
+    </section>
+
+
+    <section class="notification-card">
+
+        <h2>
+            Sent Notifications
+        </h2>
+
+        <div id="notificationList">
+
+            <p class="empty">
+                No notifications sent yet.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response & Resource Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/notifications.js"></script>
+
+</body>
+</html>

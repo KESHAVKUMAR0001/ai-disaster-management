@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Disaster</title>
+
+    <link rel="stylesheet" href="../CSS/report.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <nav>
+        <a href="citizen-dashboard.html">Dashboard</a>
+        <a href="report-disaster.html">Report Disaster</a>
+        <a href="map.html">Risk Map</a>
+        <a href="resources.html">Resources</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="decision-simulator.html">AI Simulator</a>
+    </nav>
+
+</header>
+
+
+<main class="report-container">
+
+    <div class="page-header">
+        <h1>🚨 Report Disaster</h1>
+
+        <p>
+            Report a disaster or emergency situation
+            in your area.
+        </p>
+    </div>
+
+
+    <form id="reportForm">
+
+        <!-- DISASTER TYPE -->
+
+        <div class="form-group">
+
+            <label for="disasterType">
+                Disaster Type
+            </label>
+
+            <select id="disasterType" required>
+
+                <option value="">
+                    Select Disaster Type
+                </option>
+
+                <option value="FLOOD">
+                    Flood
+                </option>
+
+                <option value="CYCLONE">
+                    Cyclone
+                </option>
+
+                <option value="EARTHQUAKE">
+                    Earthquake
+                </option>
+
+                <option value="LANDSLIDE">
+                    Landslide
+                </option>
+
+                <option value="FIRE">
+                    Fire
+                </option>
+
+                <option value="TSUNAMI">
+                    Tsunami
+                </option>
+
+                <option value="DROUGHT">
+                    Drought
+                </option>
+
+                <option value="OTHER">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="form-group">
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Describe the disaster situation..."
+                required></textarea>
+
+        </div>
+
+
+        <!-- PEOPLE AFFECTED -->
+
+        <div class="form-group">
+
+            <label for="peopleAffected">
+                Estimated People Affected
+            </label>
+
+            <input
+                type="number"
+                id="peopleAffected"
+                min="0"
+                placeholder="Example: 350"
+                required>
+
+        </div>
+
+
+        <!-- SITUATION -->
+
+        <div class="form-group">
+
+            <label for="situation">
+                Current Situation
+            </label>
+
+            <select id="situation" required>
+
+                <option value="">
+                    Select Situation
+                </option>
+
+                <option value="LOW">
+                    Low
+                </option>
+
+                <option value="MEDIUM">
+                    Medium
+                </option>
+
+                <option value="HIGH">
+                    High
+                </option>
+
+                <option value="CRITICAL">
+                    Critical
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="form-group">
+
+            <label for="location">
+                Location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter city / area"
+                required>
+
+        </div>
+
+
+        <!-- CURRENT LOCATION -->
+
+        <div class="location-section">
+
+            <button
+                type="button"
+                id="locationBtn"
+                class="location-btn">
+
+                📍 Use My Current Location
+
+            </button>
+
+            <p id="locationMessage"></p>
+
+        </div>
+
+
+        <!-- LATITUDE -->
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="latitude">
+                    Latitude
+                </label>
+
+                <input
+                    type="text"
+                    id="latitude"
+                    readonly>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="longitude">
+                    Longitude
+                </label>
+
+                <input
+                    type="text"
+                    id="longitude"
+                    readonly>
+
+            </div>
+
+        </div>
+
+
+        <!-- LANDMARK -->
+
+        <div class="form-group">
+
+            <label for="address">
+                Location / Landmark
+            </label>
+
+            <input
+                type="text"
+                id="address"
+                placeholder="Example: Near RTC Complex">
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="submit-btn">
+
+            Submit Disaster Report
+
+        </button>
+
+
+        <p id="message"></p>
+
+    </form>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response & Resource
+        Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/report.js"></script>
+
+</body>
+
+</html>

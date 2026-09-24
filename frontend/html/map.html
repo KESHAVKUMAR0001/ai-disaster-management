@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disaster Map</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/map.css">
+
+    <!-- Leaflet Map -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🚨 Disaster Response
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="map.html">
+            Map
+        </a>
+
+        <a href="resources.html">
+            Resources
+        </a>
+
+        <a href="alerts.html">
+            Alerts
+        </a>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="map-page">
+
+    <section class="map-header">
+
+        <div>
+
+            <h1>📍 Disaster Map</h1>
+
+            <p>
+                View reported disasters and
+                high-priority locations.
+            </p>
+
+        </div>
+
+        <button id="refreshMap">
+            🔄 Refresh
+        </button>
+
+    </section>
+
+
+    <section class="map-legend">
+
+        <div>
+            <span class="legend high"></span>
+            High Priority
+        </div>
+
+        <div>
+            <span class="legend medium"></span>
+            Medium Priority
+        </div>
+
+        <div>
+            <span class="legend low"></span>
+            Low Priority
+        </div>
+
+    </section>
+
+
+    <div id="map"></div>
+
+
+    <section class="map-info">
+
+        <h2>Disaster Reports</h2>
+
+        <div id="reportList">
+
+            <p>
+                Loading disaster reports...
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response System
+    </p>
+
+</footer>
+
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script src="../js/config.js"></script>
+<script src="../js/map.js"></script>
+
+</body>
+
+</html>

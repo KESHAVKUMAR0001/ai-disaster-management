@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Authority Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/authority.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Disaster Response
+        </div>
+
+        <div class="nav-links">
+            <a href="authority-dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="map.html">
+                Risk Map
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="decision-simulator.html">
+                AI Simulator
+            </a>
+
+            <a href="alerts.html">
+                Alerts
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <div>
+            <h1>👮 Authority Dashboard</h1>
+
+            <p>
+                AI-powered disaster monitoring and emergency
+                response decision support.
+            </p>
+        </div>
+
+        <div class="authority-status">
+            <span></span>
+            System Online
+        </div>
+
+    </section>
+
+
+    <!-- OVERVIEW -->
+
+    <section class="dashboard-section">
+
+        <h2>📊 Disaster Response Overview</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">🚨</div>
+
+                <div>
+                    <span>Active Incidents</span>
+                    <strong id="activeIncidents">12</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">🔴</div>
+
+                <div>
+                    <span>High Risk Zones</span>
+                    <strong id="highRiskZones">4</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+
+                <div>
+                    <span>Affected People</span>
+                    <strong id="affectedPeople">1,850</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon">🚑</div>
+
+                <div>
+                    <span>Resource Shortages</span>
+                    <strong id="resourceShortages">7</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRIORITY INCIDENT -->
+
+    <section class="dashboard-section">
+
+        <div class="section-title">
+
+            <h2>⚠️ Priority Incidents</h2>
+
+            <button onclick="window.location.href='map.html'">
+                View Map
+            </button>
+
+        </div>
+
+
+        <div class="incident-table">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Incident</th>
+                        <th>Location</th>
+                        <th>Risk</th>
+                        <th>Affected</th>
+                        <th>Priority</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="incidentTable">
+
+                    <tr>
+
+                        <td>Flood</td>
+
+                        <td>Visakhapatnam</td>
+
+                        <td>
+                            <span class="risk high">
+                                HIGH
+                            </span>
+                        </td>
+
+                        <td>350</td>
+
+                        <td>
+                            <span class="priority immediate">
+                                IMMEDIATE
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Cyclone</td>
+
+                        <td>Bheemunipatnam</td>
+
+                        <td>
+                            <span class="risk medium">
+                                MEDIUM
+                            </span>
+                        </td>
+
+                        <td>180</td>
+
+                        <td>
+                            <span class="priority high">
+                                HIGH
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Landslide</td>
+
+                        <td>Araku</td>
+
+                        <td>
+                            <span class="risk high">
+                                HIGH
+                            </span>
+                        </td>
+
+                        <td>240</td>
+
+                        <td>
+                            <span class="priority immediate">
+                                IMMEDIATE
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="view-btn">
+                                View
+                            </button>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI INTELLIGENCE -->
+
+    <section class="dashboard-section">
+
+        <h2>🤖 AI Disaster Intelligence</h2>
+
+        <div class="intelligence-grid">
+
+            <div class="intelligence-card">
+
+                <span class="ai-icon">🎯</span>
+
+                <h3>Highest Priority Zone</h3>
+
+                <strong>
+                    Visakhapatnam
+                </strong>
+
+                <p>
+                    Risk Score: 82/100
+                </p>
+
+            </div>
+
+
+            <div class="intelligence-card">
+
+                <span class="ai-icon">📦</span>
+
+                <h3>Resource Demand</h3>
+
+                <strong>
+                    HIGH
+                </strong>
+
+                <p>
+                    Additional emergency resources required.
+                </p>
+
+            </div>
+
+
+            <div class="intelligence-card">
+
+                <span class="ai-icon">🚑</span>
+
+                <h3>Response Priority</h3>
+
+                <strong>
+                    IMMEDIATE
+                </strong>
+
+                <p>
+                    Rescue response should be initiated quickly.
+                </p>
+
+            </div>
+
+
+            <div class="intelligence-card">
+
+                <span class="ai-icon">🔮</span>
+
+                <h3>Cascading Risk</h3>
+
+                <strong>
+                    MODERATE
+                </strong>
+
+                <p>
+                    Nearby areas may be affected if the situation
+                    worsens.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI RECOMMENDED PLAN -->
+
+    <section class="dashboard-section">
+
+        <h2>🏆 AI Recommended Response Plan</h2>
+
+        <div class="recommended-plan">
+
+            <div class="plan-title">
+
+                <div>
+                    <span>Recommended</span>
+
+                    <h3>
+                        PLAN B – Balanced Response
+                    </h3>
+                </div>
+
+                <div class="plan-score">
+                    91
+                    <small>/100</small>
+                </div>
+
+            </div>
+
+
+            <div class="plan-actions">
+
+                <div>
+                    🚑 Deploy <b>4 Ambulances</b>
+                </div>
+
+                <div>
+                    🚁 Deploy <b>3 Rescue Teams</b>
+                </div>
+
+                <div>
+                    🍱 Move <b>300 Food Kits</b>
+                </div>
+
+                <div>
+                    ⏱️ Estimated response:
+                    <b>20 minutes</b>
+                </div>
+
+            </div>
+
+
+            <div class="plan-buttons">
+
+                <button id="approvePlan">
+                    ✓ Approve Plan
+                </button>
+
+                <button id="overridePlan">
+                    ⚙ Override
+                </button>
+
+                <button
+                    onclick="window.location.href='decision-simulator.html'">
+                    🤖 Run Simulator
+                </button>
+
+            </div>
+
+            <p id="planMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESOURCE STATUS -->
+
+    <section class="dashboard-section">
+
+        <div class="section-title">
+
+            <h2>📦 Resource Status</h2>
+
+            <button onclick="window.location.href='resources.html'">
+                Manage Resources
+            </button>
+
+        </div>
+
+
+        <div class="resource-status-grid">
+
+            <div class="resource-status-card">
+                <span>Ambulances</span>
+
+                <strong>5 / 8</strong>
+
+                <div class="progress">
+                    <div class="progress-fill ambulance"></div>
+                </div>
+
+                <small>3 required</small>
+            </div>
+
+
+            <div class="resource-status-card">
+                <span>Rescue Teams</span>
+
+                <strong>4 / 4</strong>
+
+                <div class="progress">
+                    <div class="progress-fill rescue"></div>
+                </div>
+
+                <small>Fully available</small>
+            </div>
+
+
+            <div class="resource-status-card">
+                <span>Food Kits</span>
+
+                <strong>420 / 700</strong>
+
+                <div class="progress">
+                    <div class="progress-fill food"></div>
+                </div>
+
+                <small>280 required</small>
+            </div>
+
+
+            <div class="resource-status-card">
+                <span>Emergency Shelters</span>
+
+                <strong>4 / 6</strong>
+
+                <div class="progress">
+                    <div class="progress-fill shelter"></div>
+                </div>
+
+                <small>2 required</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEW: AUTHORITY MANAGEMENT -->
+
+    <section class="dashboard-section">
+
+        <h2>⚡ Authority Management</h2>
+
+        <div class="quick-actions">
+
+            <button onclick="window.location.href='notifications.html'">
+                🔔 Notifications
+            </button>
+
+            <button onclick="window.location.href='feedback.html'">
+                💬 Feedback
+            </button>
+
+            <button onclick="window.location.href='rescue-teams.html'">
+                🚑 Rescue Teams
+            </button>
+
+            <button onclick="window.location.href='resource-allocation.html'">
+                📦 Rescue Resources
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="dashboard-section">
+
+        <h2>⚡ Quick Actions</h2>
+
+        <div class="quick-actions">
+
+            <button onclick="window.location.href='map.html'">
+                🗺️ Open Risk Map
+            </button>
+
+            <button onclick="window.location.href='resources.html'">
+                📦 Manage Resources
+            </button>
+
+            <button
+                onclick="window.location.href='decision-simulator.html'">
+                🤖 AI Decision Simulator
+            </button>
+
+            <button onclick="window.location.href='alerts.html'">
+                🚨 Emergency Alerts
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 AI Disaster Response & Resource Management System
+        </p>
+
+    </footer>
+
+
+    <script src="../JAVASCRIPT/authority.js"></script>
+
+</body>
+</html>

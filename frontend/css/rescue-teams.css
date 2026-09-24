@@ -1,0 +1,407 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+
+    background: #0b1f3a;
+
+    color: white;
+
+    padding: 18px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.back-btn {
+
+    color: white;
+
+    text-decoration: none;
+
+    background: #1565c0;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    display: inline-block;
+}
+
+
+.back-btn:hover {
+
+    background: #1976d2;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+.rescue-container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 40px auto;
+}
+
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+
+.page-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.team-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+
+    color: #0b1f3a;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.page-header p {
+
+    color: #666;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CARD
+   ========================= */
+
+.card {
+
+    background: white;
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+.card h2 {
+
+    color: #0b1f3a;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+#rescueTeamForm {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+#rescueTeamForm label {
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+}
+
+
+#rescueTeamForm input,
+#rescueTeamForm select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    background: white;
+}
+
+
+#rescueTeamForm input:focus,
+#rescueTeamForm select:focus {
+
+    outline: none;
+
+    border-color: #1565c0;
+
+    box-shadow:
+        0 0 0 2px rgba(21, 101, 192, 0.10);
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+#rescueTeamForm button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1565c0;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#rescueTeamForm button:hover {
+
+    background: #0d47a1;
+}
+
+
+/* =========================
+   RESULT
+   ========================= */
+
+#result {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    color: #1565c0;
+}
+
+
+/* =========================
+   TEAM LIST
+   ========================= */
+
+.team-item {
+
+    background: #f4f7fb;
+
+    border-left: 5px solid #1565c0;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border-radius: 7px;
+}
+
+
+.team-item h3 {
+
+    color: #0b1f3a;
+
+    margin-bottom: 10px;
+}
+
+
+.team-item p {
+
+    margin: 7px 0;
+
+    color: #444;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.status {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.status.available {
+
+    background: #dff5e1;
+
+    color: #237a2c;
+}
+
+
+.status.busy {
+
+    background: #fff0cc;
+
+    color: #996600;
+}
+
+
+.status.offline {
+
+    background: #f5dcdc;
+
+    color: #a52a2a;
+}
+
+
+/* =========================
+   EMPTY
+   ========================= */
+
+.empty {
+
+    text-align: center;
+
+    color: #777;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+
+    background: #0b1f3a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+footer p {
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 16px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .logo {
+
+        font-size: 19px;
+    }
+
+
+    .rescue-container {
+
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+
+    .card {
+
+        padding: 25px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 26px;
+    }
+
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Alerts</title>
+
+    <link rel="stylesheet" href="../CSS/alerts.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Disaster Response
+        </div>
+
+        <div class="nav-links">
+            <a href="citizen-dashboard.html">Dashboard</a>
+            <a href="report-disaster.html">Report</a>
+            <a href="map.html">Risk Map</a>
+            <a href="resources.html">Resources</a>
+            <a href="alerts.html" class="active">Alerts</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HEADER -->
+    <section class="page-header">
+
+        <h1>🚨 Emergency Alerts</h1>
+
+        <p>
+            AI-generated disaster warnings and emergency response alerts.
+        </p>
+
+    </section>
+
+
+    <!-- CURRENT ALERT -->
+    <section class="current-alert-section">
+
+        <div class="current-alert">
+
+            <div class="alert-top">
+
+                <span class="alert-badge">
+                    HIGH PRIORITY
+                </span>
+
+                <span class="alert-time">
+                    Just Now
+                </span>
+
+            </div>
+
+            <h2>🚨 Flood Risk Alert</h2>
+
+            <p>
+                AI has identified a high-risk flood situation
+                in the reported area.
+            </p>
+
+            <div class="alert-details">
+
+                <div>
+                    <span>📍 Location</span>
+                    <strong>Visakhapatnam</strong>
+                </div>
+
+                <div>
+                    <span>⚠️ Risk Level</span>
+                    <strong>HIGH</strong>
+                </div>
+
+                <div>
+                    <span>👥 Affected Population</span>
+                    <strong>350</strong>
+                </div>
+
+                <div>
+                    <span>🚑 Response Priority</span>
+                    <strong>IMMEDIATE</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI REASON -->
+    <section class="ai-alert-section">
+
+        <h2>🤖 Why was this alert generated?</h2>
+
+        <div class="reason-card">
+
+            <div class="reason">
+                <span>1</span>
+                <p>
+                    Multiple disaster reports were received
+                    from the affected region.
+                </p>
+            </div>
+
+            <div class="reason">
+                <span>2</span>
+                <p>
+                    AI predicted a high disaster severity.
+                </p>
+            </div>
+
+            <div class="reason">
+                <span>3</span>
+                <p>
+                    A significant number of people may be affected.
+                </p>
+            </div>
+
+            <div class="reason">
+                <span>4</span>
+                <p>
+                    Emergency resources may be insufficient
+                    in the affected zone.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EMERGENCY INSTRUCTIONS -->
+    <section class="instruction-section">
+
+        <h2>🛡️ Emergency Instructions</h2>
+
+        <div class="instruction-card">
+
+            <div class="instruction-item">
+                <span>01</span>
+                <p>
+                    Move to a safer location if authorities
+                    recommend evacuation.
+                </p>
+            </div>
+
+            <div class="instruction-item">
+                <span>02</span>
+                <p>
+                    Avoid entering flooded or high-risk areas.
+                </p>
+            </div>
+
+            <div class="instruction-item">
+                <span>03</span>
+                <p>
+                    Follow official emergency instructions.
+                </p>
+            </div>
+
+            <div class="instruction-item">
+                <span>04</span>
+                <p>
+                    Keep emergency communication channels available.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALERT HISTORY -->
+    <section class="history-section">
+
+        <h2>📋 Alert History</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Alert</th>
+                        <th>Location</th>
+                        <th>Risk</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="alertTable">
+
+                    <tr>
+                        <td>Flood Risk Alert</td>
+                        <td>Visakhapatnam</td>
+                        <td>
+                            <span class="risk-high">HIGH</span>
+                        </td>
+                        <td>12 Sep 2026</td>
+                        <td>
+                            <span class="status-active">
+                                Active
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Cyclone Warning</td>
+                        <td>Bheemunipatnam</td>
+                        <td>
+                            <span class="risk-medium">MEDIUM</span>
+                        </td>
+                        <td>11 Sep 2026</td>
+                        <td>
+                            <span class="status-resolved">
+                                Resolved
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTIONS -->
+    <section class="actions">
+
+        <button onclick="window.location.href='map.html'">
+            🗺️ View Risk Map
+        </button>
+
+        <button onclick="window.location.href='citizen-dashboard.html'">
+            🏠 Dashboard
+        </button>
+
+    </section>
+
+
+    <footer>
+        <p>
+            © 2026 AI Disaster Response & Resource Management System
+        </p>
+    </footer>
+
+
+    <script src="../JAVASCRIPT/alerts.js"></script>
+
+</body>
+</html>

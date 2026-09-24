@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AI Disaster Response</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <style>
+        #message {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+    </nav>
+</header>
+
+<main class="login-page">
+    <div class="login-card">
+        <h1>Welcome Back</h1>
+        <p class="subtitle">
+            Login to access the Disaster Response System
+        </p>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="role">Login As</label>
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="CITIZEN">Citizen</option>
+                    <option value="AUTHORITY">Authority</option>
+                </select>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+            <p id="message"></p>
+        </form>
+
+        <p class="register-text">
+            Don't have an account?
+            <a href="register.html">Create Account</a>
+        </p>
+    </div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("loginForm");
+    const roleSelect = document.getElementById("role");
+    const message = document.getElementById("message");
+
+    // Smart redirect helper that checks if file exists at primary path or parent folder
+    async function smartRedirect(primaryPath, fallbackPath) {
+        message.style.color = "#0284c7";
+        message.textContent = "Checking dashboard link...";
+
+        try {
+            const res = await fetch(primaryPath, { method: "HEAD" });
+            if (res.ok) {
+                window.location.href = primaryPath;
+                return;
+            }
+        } catch (err) {
+            // If running via file:// protocol where fetch is blocked, default to primaryPath
+        }
+
+        // Try parent folder if primary wasn't resolved
+        window.location.href = primaryPath;
+    }
+
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const selectedRole = roleSelect.value;
+
+        if (!selectedRole) {
+            message.style.color = "#dc2626";
+            message.textContent = "Please select a role.";
+            return;
+        }
+
+        if (selectedRole === "CITIZEN") {
+            // If your file is in the same folder as login.html, it opens citizen-dashboard.html.
+            // If your file is named citizen.html instead, change this to "citizen.html"
+            window.location.href = "citizen-dashboard.html";
+        } else if (selectedRole === "AUTHORITY") {
+            window.location.href = "authority-dashboard.html";
+        }
+    });
+});
+</script>
+<script src="../JAVASCRIPT/login.js"></script>
+</body>
+</html>

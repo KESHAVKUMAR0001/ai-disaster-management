@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Decision Simulator</title>
+
+    <link rel="stylesheet" href="../CSS/simulator.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        AI-Disaster-Response
+    </div>
+
+    <nav>
+        <a href="citizen-dashboard.html">Dashboard</a>
+        <a href="report-disaster.html">Report Disaster</a>
+        <a href="map.html">Risk Map</a>
+        <a href="resources.html">Resources</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="decision-simulator.html">AI Simulator</a>
+    </nav>
+
+</header>
+
+
+<main class="simulator-container">
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <h1>🤖 AI Disaster Response Decision Simulator</h1>
+
+        <p>
+            Simulate different emergency response plans
+            and select the most effective plan.
+        </p>
+
+    </section>
+
+
+    <!-- CURRENT SITUATION -->
+
+    <section class="situation-card">
+
+        <h2>🚨 Current Disaster Situation</h2>
+
+        <div class="situation-grid">
+
+            <div>
+                <span>Disaster</span>
+                <strong id="disasterType">Flood</strong>
+            </div>
+
+            <div>
+                <span>Location</span>
+                <strong id="location">Visakhapatnam</strong>
+            </div>
+
+            <div>
+                <span>Risk Score</span>
+                <strong id="riskScore">82 / 100</strong>
+            </div>
+
+            <div>
+                <span>Affected People</span>
+                <strong id="affectedPeople">350</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SIMULATION SETTINGS -->
+
+    <section class="settings-card">
+
+        <h2>⚙️ Simulation Settings</h2>
+
+        <p class="info">
+            Enter currently available resources and road
+            conditions. AI will compare multiple response plans.
+        </p>
+
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label for="ambulances">
+                    Available Ambulances
+                </label>
+
+                <input
+                    type="number"
+                    id="ambulances"
+                    value="5"
+                    min="0">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="rescueTeams">
+                    Available Rescue Teams
+                </label>
+
+                <input
+                    type="number"
+                    id="rescueTeams"
+                    value="4"
+                    min="0">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="foodKits">
+                    Available Food Kits
+                </label>
+
+                <input
+                    type="number"
+                    id="foodKits"
+                    value="420"
+                    min="0">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="roadStatus">
+                    Road Accessibility
+                </label>
+
+                <select id="roadStatus">
+
+                    <option value="GOOD">
+                        Good
+                    </option>
+
+                    <option value="PARTIAL">
+                        Partially Blocked
+                    </option>
+
+                    <option value="BLOCKED">
+                        Blocked
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="simulateBtn"
+            class="simulate-btn">
+
+            🚀 Run AI Simulation
+
+        </button>
+
+        <p id="simulationMessage"></p>
+
+    </section>
+
+
+    <!-- RESPONSE PLANS -->
+
+    <section class="plans-section">
+
+        <h2>📊 AI Response Plans</h2>
+
+
+        <div class="plans-container">
+
+
+            <!-- PLAN A -->
+
+            <div class="plan-card" id="planA">
+
+                <div class="plan-header">
+
+                    <h3>
+                        Plan A
+                    </h3>
+
+                    <span>
+                        Fast Response
+                    </span>
+
+                </div>
+
+                <div class="score">
+
+                    <span>
+                        AI Score
+                    </span>
+
+                    <strong id="scoreA">
+                        78
+                    </strong>
+
+                    <small>
+                        / 100
+                    </small>
+
+                </div>
+
+                <div class="plan-details">
+
+                    <p>
+                        🚑 Ambulances:
+                        <strong id="ambulanceA">3</strong>
+                    </p>
+
+                    <p>
+                        🚒 Rescue Teams:
+                        <strong id="rescueA">2</strong>
+                    </p>
+
+                    <p>
+                        🍱 Food Kits:
+                        <strong id="foodA">200</strong>
+                    </p>
+
+                    <p>
+                        ⏱️ Response Time:
+                        <strong>15 min</strong>
+                    </p>
+
+                    <p>
+                        ⚠️ Remaining Risk:
+                        <strong>35%</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLAN B -->
+
+            <div class="plan-card recommended"
+                 id="planB">
+
+                <div class="recommended-label">
+                    AI RECOMMENDED
+                </div>
+
+                <div class="plan-header">
+
+                    <h3>
+                        Plan B
+                    </h3>
+
+                    <span>
+                        Balanced Response
+                    </span>
+
+                </div>
+
+                <div class="score">
+
+                    <span>
+                        AI Score
+                    </span>
+
+                    <strong id="scoreB">
+                        91
+                    </strong>
+
+                    <small>
+                        / 100
+                    </small>
+
+                </div>
+
+                <div class="plan-details">
+
+                    <p>
+                        🚑 Ambulances:
+                        <strong id="ambulanceB">4</strong>
+                    </p>
+
+                    <p>
+                        🚒 Rescue Teams:
+                        <strong id="rescueB">3</strong>
+                    </p>
+
+                    <p>
+                        🍱 Food Kits:
+                        <strong id="foodB">300</strong>
+                    </p>
+
+                    <p>
+                        ⏱️ Response Time:
+                        <strong>20 min</strong>
+                    </p>
+
+                    <p>
+                        ⚠️ Remaining Risk:
+                        <strong>18%</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLAN C -->
+
+            <div class="plan-card" id="planC">
+
+                <div class="plan-header">
+
+                    <h3>
+                        Plan C
+                    </h3>
+
+                    <span>
+                        Maximum Resource
+                    </span>
+
+                </div>
+
+                <div class="score">
+
+                    <span>
+                        AI Score
+                    </span>
+
+                    <strong id="scoreC">
+                        85
+                    </strong>
+
+                    <small>
+                        / 100
+                    </small>
+
+                </div>
+
+                <div class="plan-details">
+
+                    <p>
+                        🚑 Ambulances:
+                        <strong id="ambulanceC">5</strong>
+                    </p>
+
+                    <p>
+                        🚒 Rescue Teams:
+                        <strong id="rescueC">4</strong>
+                    </p>
+
+                    <p>
+                        🍱 Food Kits:
+                        <strong id="foodC">400</strong>
+                    </p>
+
+                    <p>
+                        ⏱️ Response Time:
+                        <strong>25 min</strong>
+                    </p>
+
+                    <p>
+                        ⚠️ Remaining Risk:
+                        <strong>12%</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI RECOMMENDATION -->
+
+    <section class="recommendation-card">
+
+        <h2>
+            🧠 AI Recommended Response
+        </h2>
+
+        <div class="recommendation-result">
+
+            <h3 id="recommendedPlan">
+                Plan B – Balanced Response
+            </h3>
+
+            <p id="recommendationReason">
+
+                AI recommends Plan B because it provides
+                a good balance between response speed,
+                available resources and risk reduction.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT IF -->
+
+    <section class="what-if-card">
+
+        <h2>
+            🔮 What-If Simulation
+        </h2>
+
+        <p>
+            AI checks possible resource shortages and
+            road conditions before emergency deployment.
+        </p>
+
+        <div id="whatIfResult" class="what-if-result">
+
+            Current resources are sufficient for
+            the selected response plans.
+
+        </div>
+
+    </section>
+
+
+    <!-- AUTHORITY -->
+
+    <section class="authority-card">
+
+        <h2>
+            👮 Authority Decision
+        </h2>
+
+        <p>
+            The recommended plan can be approved or
+            overridden by an authorized emergency officer.
+        </p>
+
+        <div class="authority-actions">
+
+            <button
+                id="approveBtn"
+                class="approve-btn">
+
+                ✅ Approve Recommended Plan
+
+            </button>
+
+
+            <button
+                id="overrideBtn"
+                class="override-btn">
+
+                🔄 Override Plan
+
+            </button>
+
+        </div>
+
+        <p id="authorityMessage"></p>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="bottom-actions">
+
+        <a href="resources.html">
+            📦 Resources
+        </a>
+
+        <a href="map.html">
+            🗺️ Risk Map
+        </a>
+
+        <a href="citizen-dashboard.html">
+            🏠 Dashboard
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 AI Disaster Response &
+        Resource Management System
+    </p>
+
+</footer>
+
+
+<script src="../JAVASCRIPT/simulator.js"></script>
+
+</body>
+
+</html>
