@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Disaster Map</title>
+    <title>Disaster Map - AI Disaster Response System</title>
 
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/map.css">
@@ -15,7 +15,6 @@
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     >
-
 </head>
 
 <body>
@@ -26,13 +25,13 @@
         🚨 Disaster Response
     </div>
 
-    <nav>
+    <nav class="nav-links">
 
         <a href="dashboard.html">
             Dashboard
         </a>
 
-        <a href="map.html">
+        <a href="map.html" class="active">
             Map
         </a>
 
@@ -44,7 +43,7 @@
             Alerts
         </a>
 
-        <button id="logoutBtn">
+        <button id="logoutBtn" class="logout-btn">
             Logout
         </button>
 
@@ -53,60 +52,117 @@
 </header>
 
 
-<main class="map-page">
+<main>
 
-    <section class="map-header">
+    <section class="page-header">
 
-        <div>
+        <h1>📍 Disaster Map</h1>
 
-            <h1>📍 Disaster Map</h1>
-
-            <p>
-                View reported disasters and
-                high-priority locations.
-            </p>
-
-        </div>
-
-        <button id="refreshMap">
-            🔄 Refresh
-        </button>
+        <p>
+            Real-time visual analysis of reported disasters, AI risk zones, emergency resources, and evacuation routes.
+        </p>
 
     </section>
 
 
-    <section class="map-legend">
+    <section class="map-section">
 
-        <div>
-            <span class="legend high"></span>
-            High Priority
+        <div class="map-controls">
+
+            <h2>Map Layers & Controls</h2>
+
+            <label>
+                <input type="checkbox" id="disasterToggle" checked> Active Disasters
+            </label>
+
+            <label>
+                <input type="checkbox" id="riskToggle" checked> AI Risk Zones
+            </label>
+
+            <label>
+                <input type="checkbox" id="resourceToggle" checked> Resources
+            </label>
+
+            <label>
+                <input type="checkbox" id="routeToggle" checked> Evacuation Routes
+            </label>
+
+            <button id="locationBtn">
+                📍 My Location
+            </button>
+
+            <button id="refreshMap" class="refresh-btn">
+                🔄 Refresh Map
+            </button>
+
         </div>
 
-        <div>
-            <span class="legend medium"></span>
-            Medium Priority
-        </div>
+        <div id="map"></div>
 
-        <div>
-            <span class="legend low"></span>
-            Low Priority
+    </section>
+
+
+    <section class="legend-section">
+
+        <h2>Map Legend</h2>
+
+        <div class="legend-container">
+
+            <div class="legend-item">
+                <span class="legend-dot disaster"></span>
+                Reported Disaster
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot high-risk"></span>
+                High Risk Zone
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot medium-risk"></span>
+                Medium Risk Zone
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot resource"></span>
+                Emergency Resource Center
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-line route"></span>
+                Recommended Evacuation Route
+            </div>
+
         </div>
 
     </section>
 
 
-    <div id="map"></div>
+    <section class="ai-analysis">
 
+        <h2>AI Risk & Evacuation Analysis</h2>
 
-    <section class="map-info">
+        <div class="analysis-card">
 
-        <h2>Disaster Reports</h2>
+            <div>
+                <h3>Priority Zone</h3>
+                <p id="priorityZone">Visakhapatnam – High Risk</p>
+            </div>
 
-        <div id="reportList">
+            <div>
+                <h3>Affected Population</h3>
+                <p id="affectedPopulation">350 People</p>
+            </div>
 
-            <p>
-                Loading disaster reports...
-            </p>
+            <div>
+                <h3>Resource Requirement</h3>
+                <p id="resourceRequirement">High</p>
+            </div>
+
+            <div>
+                <h3>Evacuation Priority</h3>
+                <p id="evacuationPriority">Immediate</p>
+            </div>
 
         </div>
 
@@ -133,4 +189,4 @@
 
 </body>
 
-</html>
+</html>

@@ -107,6 +107,28 @@ body {
     margin-right: 6px;
 }
 
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.logout-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #c1121f;
+}
+
 #locationBtn {
     background: #172b4d;
     color: white;
@@ -117,10 +139,29 @@ body {
     border-radius: 6px;
 
     cursor: pointer;
+    font-weight: 500;
 }
 
 #locationBtn:hover {
     background: #0f1e35;
+}
+
+.refresh-btn {
+    background: #2a9d8f;
+    color: white;
+
+    border: none;
+    padding: 10px 16px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.refresh-btn:hover {
+    background: #218377;
 }
 
 

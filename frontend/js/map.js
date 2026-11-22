@@ -5,12 +5,12 @@
 const map = L.map("map").setView([17.6868, 83.2185], 11);
 
 
-// OpenStreetMap Layer
-
+// Esri World Street Map Layer (Free, clean, high-performance vector basemap without API key watermarks)
 L.tileLayer(
-    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
     {
-        attribution: "&copy; OpenStreetMap contributors"
+        attribution: "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012",
+        maxZoom: 19
     }
 ).addTo(map);
 
@@ -275,6 +275,19 @@ document
             }
         );
     });
+
+
+// ===============================
+// REFRESH MAP
+// ===============================
+
+const refreshBtn = document.getElementById("refreshMap");
+if (refreshBtn) {
+    refreshBtn.addEventListener("click", function () {
+        map.setView([17.6868, 83.2185], 11);
+        map.invalidateSize();
+    });
+}
 
 
 // ===============================

@@ -11,4 +11,3 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
 echo.
 echo All background services on ports 5000 and 8081 stopped.
 echo ========================================================
-timeout /t 5
